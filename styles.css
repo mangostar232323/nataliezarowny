@@ -64,3 +64,24 @@
 .play-1{ background: rgba(232,179,64,.16); }
 .play-2{ background: rgba(48,126,170,.14); }
 .play-3{ background: rgba(178,75,58,.14); }
+/* Make the home image feel intentional (not gigantic) */
+.home-right{
+  max-width: 420px;
+  justify-self: end;
+}
+
+@media (max-width: 860px){
+  .home-right{
+    max-width: 520px;
+    justify-self: start;
+  }
+}
+
+.home-right img{
+  width: 100%;
+  height: 520px;          /* key: fixed height so it crops nicely */
+  object-fit: cover;      /* key: crop instead of shrinking weirdly */
+  object-position: 50% 20%;
+  border-radius: 22px;
+  display:block;
+}
